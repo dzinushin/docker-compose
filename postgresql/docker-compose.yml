@@ -1,8 +1,10 @@
 version: "3.8"
 services:
   database:
-    image: postgres:13
+    image: 'postgres:16.0'
     ports:
       - 5432:5432
     environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ${PG_PWD:-postgres}
